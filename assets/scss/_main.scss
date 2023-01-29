@@ -1,6 +1,11 @@
 .main {
   width: 100%;
   background-color: var(--background);
+  padding-bottom: 5rem;
+    // mobil and tablet screen 
+    @media screen and (max-width: 992px) {
+      padding-bottom: 0;
+    }
 }
 
 .main-text {

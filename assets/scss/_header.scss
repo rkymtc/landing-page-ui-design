@@ -87,8 +87,9 @@
   margin-right: 1.75rem;
 
   // mobil and tablet screen 
-  @media screen and (max-width: 45rem) {
+  @media screen and (max-width: 768px) {
     margin-right: 0;
+    font-weight: 600;
   }
 }
 
@@ -99,9 +100,10 @@
   color: #fff;
   font-weight: 500;
   background-color: var(--darkblue);
+  display: inline;
 
   // mobil and tablet screen 
-  @media screen and (max-width: 768rem) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }

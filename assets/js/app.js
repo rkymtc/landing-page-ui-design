@@ -8,7 +8,7 @@ let addSelectClass = function () {
    this.classList.add('is-active');
 }
 
-var removeSelectClass = function () {
+let removeSelectClass = function () {
    for (var i = 0; i < activeMenu.length; i++) {
       activeMenu[i].classList.remove('is-active')
    }
@@ -29,10 +29,3 @@ if (mobileMenu && navbarMenu) {
    });
 }
 
-// Close Navbar Menu on Click Links
-document.querySelectorAll(".menu-link").forEach((link) => {
-   link.addEventListener("click", () => {
-      mobileMenu.classList.remove("is-active");
-      navbarMenu.classList.remove("is-active");
-   });
-});
