@@ -207,22 +207,9 @@
 //  Desing Card Content
 .design-card-wrapper {
   flex-wrap: wrap;
-  padding: 40px 0 59px;
+  padding: 40px 0 60px;
   max-width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 1.25em;
-  justify-content: space-between;
-
-  @media screen and (max-width: 1440px) {
-    grid-template-columns: repeat(2, auto);
-    justify-content: center;
-  }
-
-  @media screen and (max-width: 992px) {
-    grid-template-columns: repeat(1, auto);
-  }
 }
 
 .design-card-image {

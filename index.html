@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page UI Design</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <!-- Bootstrap Style CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/normalize.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -75,7 +77,7 @@
             <div class="main-wrapper-search-input">
               <form action="post">
                 <img src="assets/img/search.svg" alt="search" />
-                <input type="text" placeholder="Search">
+                <input type="text" placeholder="Search" id="search" >
               </form>
             </div>
           </div>
@@ -124,8 +126,8 @@
         </div>
       </div>
 
-      <div class="design-card-wrapper">
-        <div class="design-card">
+      <div id="myItems" class="design-card-wrapper row gy-1 gx-1 gx-lg-0 justify-content-lg-center justify-content-md-between">
+        <div class="design-card col-md-6 col-lg-4  my-4">
           <div class="design-card-image">
             <img src="assets/img/card-first.png" alt="design Image" class="design-card-preview" />
             <div class="design-card-sketch">
@@ -136,7 +138,7 @@
           <div class="design-card-detail">
             <div class="card-detail-profile">
               <img src="assets/img/photo.png" alt="photo" />
-              <span>by <strong>Jenny Molla</strong></span>
+              <span class="test">by <strong>Test First Jenny Molla</strong></span>
             </div>
 
             <div class="card-detail-count">
@@ -149,7 +151,7 @@
           </div>
         </div>
 
-        <div class="design-card">
+        <div class="design-card col-md-6 col-lg-4  my-4">
           <div class="design-card-image">
             <img src="assets/img/card-second.png" alt="design Image" class="design-card-preview" />
             <div class="design-card-sketch">
@@ -160,7 +162,7 @@
           <div class="design-card-detail">
             <div class="card-detail-profile">
               <img src="assets/img/photo.png" alt="photo" />
-              <span>by <strong>Jenny Molla</strong></span>
+              <span>by <strong> Test Second Jenny Molla</strong></span>
             </div>
             <div class="card-detail-count">
               <img src="assets/img/code.svg" alt="photo" />
@@ -171,7 +173,7 @@
           </div>
         </div>
 
-        <div class="design-card">
+        <div class="design-card col-md-6 col-lg-4  my-4">
           <div class="design-card-image">
             <img src="assets/img/card-third.png" alt="design Image" class="design-card-preview" />
             <div class="design-card-sketch">
@@ -199,5 +201,9 @@
 </body>
 <!-- Scripts -->
 <script src="./assets/js/app.js"> </script>
+<!-- Bootstrap Script CDN -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </html>
