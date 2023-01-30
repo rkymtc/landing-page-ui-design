@@ -1,3 +1,11 @@
 # landing-page-ui-design
 
-https://www.uidesigndaily.com/posts/figma-landing-page-website-day-1384
+# Normalize.css 
+Tarayıcılar arasında oluşan farklılıkları normalleştirmeyi sağlayan içerisinde HTML5 etiketleri için sabit değerler tutan bir css dosyasıdır. 
+
+Normalize.css'i indirmek için: https://necolas.github.io/normalize.css linkine tıklayıp download butonu yardımıyla Normalize.css'in indirebilirsiniz.
+Normalize.css'i kullanmak için: <link href="normalize.css" rel="stylesheet">
+
+
+
+ 
