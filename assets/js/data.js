@@ -1,4 +1,3 @@
-// posts data
 const data = [
     {
         id: 1,
@@ -125,32 +124,59 @@ const data = [
         
     }
 ];
-const myItems = document.querySelector('.design-card-wrapper');
-window.addEventListener("DOMContentLoaded", function () {
-    const showInHtml = data.map((project) => {
-        return`<div class="design-card col-md-6 col-lg-4  my-4">
-        <div class="design-card-image">
-          <img src=${project.design} alt="design Image" class="design-card-preview" />
-          <div class="design-card-sketch">
-            <img src=${project.toolImg} alt="${project.tool}">
-          </div>
+
+const displayProducts = (filteredProducts) => {
+  myItems.innerHTML = filteredProducts.map(project =>
+      `
+      <div class="design-card col-md-6 col-lg-4  my-4">
+      <div class="design-card-image">
+        <img src=${project.design} alt="design Image" class="design-card-preview" />
+        <div class="design-card-sketch">
+          <img src=${project.toolImg} alt="${project.tool}">
+        </div>
+      </div>
+
+      <div class="design-card-detail">
+        <div class="card-detail-profile">
+          <img src="${project.profile}" alt="photo" />
+          <span id="designer">by <strong id="strong">${project.author}</strong></span>
         </div>
 
-        <div class="design-card-detail">
-          <div class="card-detail-profile">
-            <img src="${project.profile}" alt="photo" />
-            <span id="designer">by <strong id="strong">${project.author}</strong></span>
-          </div>
-
-          <div class="card-detail-count">
-            <img src="assets/img/code.svg" alt="photo" />
-            <span>${project.code}</span>
-            <img src="assets/img/appreciate.svg" alt="photo" />
-            <span>${project.appreciate}</span>
-          </div>
+        <div class="card-detail-count">
+          <img src="assets/img/code.svg" alt="photo" />
+          <span>${project.code}</span>
+          <img src="assets/img/appreciate.svg" alt="photo" />
+          <span>${project.appreciate}</span>
         </div>
-      </div>`
-    })
-    myItems.innerHTML = showInHtml.join(""); 
-    // If you don’t stipulate how to perform the join (which is what toString is doing), it will default to a comma.
-});
+      </div>
+    </div>
+      `
+  ).join("");
+};
+
+displayProducts(data)
+
+const buttons = document.querySelectorAll('.view-time');
+const categoriesContainer = document.querySelector(".design-category")
+const setCategories = () => {
+  const allCats = data.map((item) => item.category);
+  const categories = [
+      "All",
+      ...allCats.filter((item , i) => {
+      return allCats.indexOf(item) === i;
+      }),
+  ];
+
+  categoriesContainer.innerHTML = categories.map((category) => 
+      `
+      <li><a href="javascript:;" class="design-category-item">${category}</a></li>
+      `
+  ).join("")
+
+  categoriesContainer.addEventListener("click", (e) => {
+      const selectedCat = e.target.textContent;
+      selectedCat === "All" ? displayProducts(data) : displayProducts(data.filter(item => item.category === selectedCat));
+  })
+
+};
+setCategories()

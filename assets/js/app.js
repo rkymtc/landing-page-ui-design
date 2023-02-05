@@ -28,6 +28,8 @@ if (mobileMenu && navbarMenu) {
    });
 }
 
+
+
 // Search 
 function Search() {
    const cards = document.querySelectorAll('.design-card')
