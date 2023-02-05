@@ -124,9 +124,9 @@ const data = [
       
   }
 ];
-const myItems = document.querySelector('.design-card-wrapper');
-const displayProducts = (filteredDesign) => {
-myItems.innerHTML = filteredDesign.map(item =>
+const cardDesign = document.querySelector('.design-card-wrapper');
+const displayDesign = (filteredDesign) => {
+cardDesign.innerHTML = filteredDesign.map(item =>
     `
     <div class="design-card col-md-6 col-lg-4 my-4">
     <div class="design-card-image">
@@ -156,7 +156,7 @@ myItems.innerHTML = filteredDesign.map(item =>
 // If you don’t stipulate how to perform the join (which is what toString is doing), it will default to a comma.
 
 
-displayProducts(data)
+displayDesign(data)
 
 const categoriesContainer = document.querySelector(".design-category")
 const setCategories = () => {
@@ -176,7 +176,7 @@ categoriesContainer.innerHTML = categories.map((category) =>
 
 categoriesContainer.addEventListener("click", (e) => {
     const selectedCat = e.target.textContent;
-    selectedCat === "All" ? displayProducts(data) : displayProducts(data.filter(item => item.category === selectedCat));
+    selectedCat === "All" ? displayDesign(data) : displayDesign(data.filter(item => item.category === selectedCat));
 })
 
 };
